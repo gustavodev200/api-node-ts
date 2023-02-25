@@ -8,6 +8,8 @@ const main = async () => {
 
   const server = express();
 
+  server.use(express.json());
+
   server.use("/users", usersRoutes);
 
   const port = process.env.PORT || 8000;
